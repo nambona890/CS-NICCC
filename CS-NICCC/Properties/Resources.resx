@@ -121,19 +121,13 @@
   <data name="chcknbnk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chcknbnk.mod;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ikpFlac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ikpFlac.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ikpMP3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ikpMP3.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="irrKlang_NET4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\irrKlang.NET4.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="NAudio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NAudio.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="scene1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scene1.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SharpMikNAudio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SharpMikNAudio.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

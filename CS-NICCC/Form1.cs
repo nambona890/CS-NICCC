@@ -8,7 +8,10 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using IrrKlang;
+using SharpMik;
+using SharpMik.Player;
+using SharpMik.Drivers;
+using System.Threading;
 
 namespace CS_NICCC
 {
@@ -18,6 +21,8 @@ namespace CS_NICCC
         private Frame[] frames = new Frame[1800];
         private short frame = 0;
         private bool update = false;
+        SharpMik.Module m_Mod = null;
+        MikMod m_Player;
         public Form1()
         {
             AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
@@ -38,10 +43,16 @@ namespace CS_NICCC
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadData();
-            Stream chcknbnk = new MemoryStream(Properties.Resources.chcknbnk);
-            ISoundEngine engine = new ISoundEngine();
-            ISoundSource mod = engine.AddSoundSourceFromIOStream(chcknbnk, "themodule");
-            engine.Play2D(mod,true,false,false);
+            string path = Directory.GetCurrentDirectory();
+            //File.WriteAllBytes("temp.mod", Properties.Resources.chcknbnk);
+            Stream damod = new MemoryStream(Properties.Resources.chcknbnk);
+            m_Player = new MikMod();
+            ModDriver.Mode = (ushort)(ModDriver.Mode | SharpMikCommon.DMODE_NOISEREDUCTION);
+            m_Player.Init<NaudioDriver>("");
+            m_Mod = m_Player.LoadModule(damod);
+            m_Mod.wrap = true;
+            m_Player.Play(m_Mod);
+
             System.Timers.Timer atimer = new System.Timers.Timer();
             atimer.Interval = 1000.0/60.0;
             atimer.Elapsed += Refresh;

@@ -35,11 +35,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="irrKlang.NET4">
-      <HintPath>Resources\irrKlang.NET4.dll</HintPath>
-    </Reference>
     <Reference Include="NAudio">
       <HintPath>Resources\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpMikNAudio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\SharpMikNAudio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,19 +67,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -87,19 +88,13 @@
     <None Include="Resources\scene1.bin" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\chcknbnk.mod" />
+    <EmbeddedResource Include="Resources\chcknbnk.mod" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\NAudio.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ikpFlac.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ikpMP3.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\irrKlang.NET4.dll" />
+    <EmbeddedResource Include="Resources\SharpMikNAudio.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

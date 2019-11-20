@@ -73,36 +73,6 @@ namespace CS_NICCC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] ikpFlac {
-            get {
-                object obj = ResourceManager.GetObject("ikpFlac", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] ikpMP3 {
-            get {
-                object obj = ResourceManager.GetObject("ikpMP3", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] irrKlang_NET4 {
-            get {
-                object obj = ResourceManager.GetObject("irrKlang_NET4", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
         internal static byte[] NAudio {
             get {
                 object obj = ResourceManager.GetObject("NAudio", resourceCulture);
@@ -116,6 +86,16 @@ namespace CS_NICCC.Properties {
         internal static byte[] scene1 {
             get {
                 object obj = ResourceManager.GetObject("scene1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SharpMikNAudio {
+            get {
+                object obj = ResourceManager.GetObject("SharpMikNAudio", resourceCulture);
                 return ((byte[])(obj));
             }
         }
