@@ -73,7 +73,7 @@ namespace CS_NICCC
                                 ushort stC = 0;
                                 stC |= Convert.ToUInt16(byteArray[byteIndex++] << 8);
                                 stC |= Convert.ToUInt16(byteArray[byteIndex++]);
-                                colors[i] = Utils.ST2RGB(stC);
+                                colors[15-i] = Utils.ST2RGB(stC);
                             }
                         }
                     }
